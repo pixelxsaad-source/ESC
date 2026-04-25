@@ -17,12 +17,15 @@ modules:
       - source: system
         destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
 
-  - type: dnf
+  - type: rpm-ostree
     repos:
       copr:
         - atim/starship
     install:
       packages:
+        - virtualbox
+        - libreoffice-writer
+        - minecraft-launcher
         - micro
         - starship
     remove:
